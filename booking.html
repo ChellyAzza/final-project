@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="icon" href="https://lh3.googleusercontent.com/proxy/2sipn4ae90kvhD-bRND1Poip-UkWj6-sBOl7YmEhnh3fYg8J93ERoyMENNPn3c5gAQNxeeFfRgE54FWBH1dD6hQO0fnbmj3pTEsf3ik">
+
+
+
+
+    <title>Book Now !</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <nav>
+        <img src="https://lh3.googleusercontent.com/proxy/1BgXEF6cMmYBTxT920wlR4UwQ1rowZY_Oh6VZUaxAXncKk-gh9O-p_V8rgruRE9ad9qrttkAv862wBPzQMqe_xRCTvox5Kpbv6vuHxs" alt="">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="booking.html">booking</a>
+            <a href="contact.html">contact</a>
+
+        </div>
+    </nav>
+    <main>
+        <h1 id="title">Consult our offers and book now </h1>
+        <div class="room">
+            <img src="https://static.grandluxuryhotels.com/assets/ndrampm/72549-root-bayview-twin-room-main-bedroom.jpgF" alt="">
+            <div class="text">
+                <h1> One Room only</h1>
+                <p>116 m2, View: Partial ocean view - Location: South facing - Shower in all rooms Shower in all rooms, bathtub in some rooms, Balcony or Terrace in all rooms</p>
+                <h2> 200 DT</h2>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                   book now
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel"> book now</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="display: flex;flex-direction: column;">
+                                <form class="reserver">
+                                    <label for="">number of person </label>
+                                    <select name="choisir" id="room_type" onchange="finalCost()">
+                                     
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                   </select>
+                                    <label for="">number of nights</label>
+                                    <select name="choisir" id="room_number" onchange="finalCost()">
+                                        <option value="0">0</option>
+                                     <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                   </select>
+                                    <label for="">number of children</label>
+                                    <select name="choisir" id="person_number" onchange="finalCost()">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                   </select>
+                                    <label for="">number of rooms</label>
+                                    <select name="choisir" id="child_number" onchange="finalCost()">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                   </select>
+                                    <label for="">restaurant facility</label>
+                                    <select name="choisir" id="res_facilities" onchange="finalCost()">
+                                    <option value="1">yes</option>
+                                    <option value="2">no</option>
+                                    
+                                   </select>
+                                    <button id="result">0</button>
+                                </form>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="room">
+            <img src="https://static.grandluxuryhotels.com/assets/ndrampm/62038-root-rooms-oceanfront-corner-suite.jpg" alt="">
+            <div class="text">
+                <h1>double room </h1>
+                <p>139 m2, View: Bay view and intracoastal waterway - Location: West - Shower in all rooms, bathtub in some rooms, Balcony or terrace in all rooms in all rooms, bathtub in some rooms, Balcony or Terrace in all rooms</p>
+                <h2> 400 DT</h2>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    book now 
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">book now </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="display: flex;flex-direction: column;">
+                                <form class="reserver">
+                                    <label for=""> number of person </label>
+                                    <select name="choisir" id="room_type" onchange="finalCost()">
+                        
+                                    <option value="0">0</option>
+                                     
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                   </select>
+                                    <label for="">number of nights</label>
+                                    <select name="choisir" id="room_number" onchange="finalCost()"> 
+                                    <option value="0">0</option>
+
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                   </select>
+                                    <label for="">number of child</label>
+                                    <select name="choisir" id="person_number" onchange="finalCost()">
+                                    <option value="0">0</option>
+
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                   </select>
+                                    <label for="">number of room</label>
+                                    <select name="choisir" id="child_number" onchange="finalCost()">
+                                    <option value="0">0</option>
+
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                   </select>
+                                    <label for="">restaurant facilities</label>
+                                    <select name="choisir" id="res_facilities" onchange="finalCost()">
+                                        <option value="0" selected> Do you want restaurant facilities? </option>
+                                    <option value="1">yes</option>
+                                    <option value="2">no</option>
+                                    
+                                   </select>
+                                    <button id="result">0</button>
+                                </form>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="room">
+            <img src="https://static.grandluxuryhotels.com/assets/ndrampm/82110-root-faena-suite-living-area.jpg" alt="">
+            <div class="text">
+                <h1>feana suite</h1>
+                <p>419 m2, View: Waterfront - Location: East - Bath and shower in all rooms Jacuzzi in some rooms, Balcony or Terrace in all rooms.</p>
+                <h2> 1000 DT</h2>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    book now
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">book now</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="display: flex;flex-direction: column;">
+
+                                <div class="hotel_reserve_box" style="width:40%;margin:auto;">
+                                    <h3> Hotel Reservation Form </h3><br>
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="date">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Restaurant facilities?</label>
+                                            <select class="form-control" id="res_facilities" onchange="finalCost()">
+                    <option value="0" selected> Do you want restaurant facilities? </option>
+                    <option value="2"> Yes </option>
+                    <option value="0"> No </option>
+                </select>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <label>Total Cost ($) : </label>
+                                            <span id="result" style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <label for="">price</label>
+                            <input type="number" id="price" value="0">
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <footer>
+
+        <div>
+            <img src="https://fr.grandluxuryhotels.com/assets/img/svg/Logo_GLH_footer_booking.svg" alt="">
+        </div>
+        <div>
+
+            <h3> All Copyrights reserved &copy;|2021 </h3>
+            <h3>+33 52486542</h3>
+
+        </div>
+        <div>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-google"></a>
+
+        </div>
+    </footer>
+    <script src="js.js">
+    </script>
+</body>
+
+</html>
